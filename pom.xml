@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>ZhongFuxing2019211001000914</artifactId>
+  <artifactId>2019211001000914ZhongFuxing</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>ZhongFuxing2019211001000914 Maven Webapp</name>
+  <name>2019211001000914ZhongFuxing Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -20,6 +20,13 @@
   </properties>
 
   <dependencies>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -29,7 +36,7 @@
   </dependencies>
 
   <build>
-    <finalName>ZhongFuxing2019211001000914</finalName>
+    <finalName>2019211001000914ZhongFuxing</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
