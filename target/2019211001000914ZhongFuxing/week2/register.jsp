@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% String path= request.getContextPath();%>
 <html>
 <head>
     <title>Title</title>
@@ -33,14 +34,14 @@
      </script>
 </head>
 <body>
-<form>
+<form action="<%=path%>/register" method="post">
      UserName:<input type="text" name="name" required> <br/>
      Password:<input type="password" name="password" required minlength="8" /> <br/>
      Email:<input type="email" name="Email" required> <br/>
-     <input id="man" type="radio" checked="checked" name="1" required />female
-     <input id="woman" type="radio" name="1" required/>male
+     <input id="man" type="radio" checked="checked" name="1" value="female" required />female
+     <input id="woman" type="radio" name="1" value="male" required/>male
      <br/>
-     <input type="date" required/>
+     <input type="date" name="birthday"  required/>
      <br/>
      <input type="submit" value="Register"/>
 
