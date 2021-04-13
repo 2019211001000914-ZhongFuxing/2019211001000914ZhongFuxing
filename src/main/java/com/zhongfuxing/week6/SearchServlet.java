@@ -2,10 +2,13 @@ package com.zhongfuxing.week6;
 
 import java.io.IOException;
 
-@WebServlet()
+@WebServlet("/search")
 public class SearchServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String txt = request.getParameter("txt");
         String url = request.getParameter("search");
         if("".equals(txt)){
@@ -18,9 +21,5 @@ public class SearchServlet extends HttpServlet {
 
             }
         }
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request, response);
     }
 }
