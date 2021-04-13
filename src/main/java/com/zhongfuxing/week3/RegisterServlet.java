@@ -78,6 +78,7 @@ public class RegisterServlet extends HttpServlet {
                 System.out.println("添加成功");
             else
                 System.out.println("添加失败");
+            response.sendRedirect("login.jsp");
         }
         catch (Exception e){
             e.printStackTrace();
