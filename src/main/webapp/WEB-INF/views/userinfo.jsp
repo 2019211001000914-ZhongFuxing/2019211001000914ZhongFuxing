@@ -1,3 +1,4 @@
+<%@ page import="com.zhongfuxing.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -7,7 +8,7 @@
 <%@include file="header.jsp" %>
 <h1>user info </h1>
 <%
-    User user = (ser) request.getAttribute("user");
+    User user = (User) request.getAttribute("user");
 %>
 <table>
     <tr>
