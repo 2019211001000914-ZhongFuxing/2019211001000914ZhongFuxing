@@ -48,16 +48,16 @@ public class LoginServlet extends HttpServlet {
 
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
-                request.setAttritube("id",rs.getInt("id"));
-                request.setAttritube("username",rs.getString("username"));
-                request.setAttritube("password",rs.getString("password"));
-                request.setAttritube("email",rs.getString("email"));
-                request.setAttritube("gender",rs.getString("gender"));
-                request.setAttritube("birthDate",rs.getString("birthDate"));
+                request.setAttribute("id",rs.getInt("id"));
+                request.setAttribute("username",rs.getString("username"));
+                request.setAttribute("password",rs.getString("password"));
+                request.setAttribute("email",rs.getString("email"));
+                request.setAttribute("gender",rs.getString("gender"));
+                request.setAttribute("birthDate",rs.getString("birthDate"));
 
 
             }else {
-                request.setAttritube("message","username or password error!!!");
+                request.setAttribute("message","username or password error!!!");
                 request.getRequestDispatcher("login.jsp").forward(request,response);
             }
 
