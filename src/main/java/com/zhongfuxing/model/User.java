@@ -1,5 +1,7 @@
 package com.zhongfuxing.model;
 
+import java.util.Date;
+
 public class User {
     private int  id;
     private String username;
@@ -86,5 +88,8 @@ public class User {
                 ", gender='" + gender + '\'' +
                 ", birthdate=" + birthdate +
                 '}';
+    }
+
+    public void setBirthday(Date date) {
     }
 }

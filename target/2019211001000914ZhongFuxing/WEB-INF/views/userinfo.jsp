@@ -7,11 +7,6 @@
 <body>
 <%@include file="header.jsp" %>
 <h1>user info </h1>
-<%    Cookie[] allCookies = request.getCookies();--%>
-<%    for (Cookie cookie : allCookies) {--%>
-<%--//        out.print("<br>" + cookie.getName() + "<br>  value=" + cookie.getValue());--%>
-<%--    }--%>
-
 <%
     User user = (User) request.getAttribute("user");
 %>
