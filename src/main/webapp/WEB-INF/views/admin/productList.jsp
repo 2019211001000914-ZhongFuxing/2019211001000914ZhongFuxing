@@ -1,4 +1,4 @@
-<%@include file="../views/header.jsp" %>
+<%@include file="../header.jsp" %>
 
 <section id="cart_items">
 		<div class="container">
@@ -88,4 +88,4 @@
 		</div>
 		</div>
 		</section>
- <%@include file="../views/footer.jsp" %>
+ <%@include file="../footer.jsp" %>

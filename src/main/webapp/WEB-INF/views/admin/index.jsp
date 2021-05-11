@@ -1,5 +1,5 @@
 
-<%@include file="../views/header.jsp"%>
+<%@include file="../header.jsp"%>
 <div class="container">
 	    	<div class="row">    		
 	    		<div class="col-sm-12">    			   			
@@ -44,4 +44,4 @@
 					</div></div>
 <div style="height: 194px; "></div>
 
- <%@include file="../views/footer.jsp" %>
+ <%@include file="../footer.jsp" %>

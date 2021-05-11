@@ -1,4 +1,4 @@
-<%@include file="../views/header.jsp" %>
+<%@include file="../header.jsp" %>
 
 <section id="z`z`">
 		<div class="container">
@@ -73,4 +73,4 @@
 		</div>
 		</div>
 		</section>
- <%@include file="../views/footer.jsp" %>
+ <%@include file="../footer.jsp" %>

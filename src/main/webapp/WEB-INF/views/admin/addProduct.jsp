@@ -1,6 +1,6 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="../views/header.jsp"%>
+<%@include file="../header.jsp"%>
 
 <div id="contact-page" class="container">
 <div class="row">  	
@@ -52,4 +52,4 @@
 	    		</div>
 	    		</div>
 	    		</div>
-<%@include file="../views/footer.jsp"%>
+<%@include file="../footer.jsp"%>
