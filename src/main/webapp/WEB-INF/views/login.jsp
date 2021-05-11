@@ -28,7 +28,7 @@
         }
     }
 %>
-<form action="${pageContext.request.contextPath}/login" method="post">
+<form action="${pageContext.request.contextPath}/login" method="post",action="<%=request.getContextPath()+"/login"%>">
     <h1>Login</h1>
     UserName:<input type="text" name="username" value="<%username%>"><br>
     Password:<input type="password" name="password" value="<%username%>><br>

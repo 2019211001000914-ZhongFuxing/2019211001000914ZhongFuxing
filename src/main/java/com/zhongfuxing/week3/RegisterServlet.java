@@ -79,6 +79,7 @@ public class RegisterServlet extends HttpServlet {
             else
                 System.out.println("添加失败");
             response.sendRedirect("login.jsp");
+            response.sendRedirect("Login");//LoginServlet
         }
         catch (Exception e){
             e.printStackTrace();
@@ -94,12 +95,10 @@ public class RegisterServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request,response);
+        request.getRequestDispatcher("WEB-INF/views/register.jsp"),forward(request,response);
     }
 
-
-
-public void destory(){
+    public void destory(){
         super.destroy();
         try {
         conn.close();
