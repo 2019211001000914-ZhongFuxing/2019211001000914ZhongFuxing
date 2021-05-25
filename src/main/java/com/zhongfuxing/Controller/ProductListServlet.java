@@ -1,6 +1,8 @@
 package com.zhongfuxing.Controller;
 
+import com.zhongfuxing.dao.ProductDao;
 import com.zhongfuxing.model.Category;
+import com.zhongfuxing.model.Product;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,14 +27,17 @@ public class ProductListServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        ProductDao productDao=new ProductDao();
         try
         {
-            List<Category>categoryList= Category.findAllCategory(con);
-        request.setAttribute("categoryList",categoryList);
-        String path="WEB-INF/views/admin/productList.jsp";
-        request.getRequestDispatcher(path).forward(request,response);}
+            //week12
+            List<Product> productList=productDao.findAll(con);
+            request.setAttribute("productList",productList);
+            List<Category>categoryList= Category.findAllCategory(con);}
         catch(SQLException throwables){
             throwables.printStackTrace();
         }
+        String path="WEB-INF/views/admin/productList.jsp";
+        request.getRequestDispatcher(path).forward(request,response);}
     }
-}
+

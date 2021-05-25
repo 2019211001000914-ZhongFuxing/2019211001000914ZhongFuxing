@@ -23,6 +23,9 @@ public class Category {
         this.active = active;
     }
 
+    public static String findByCaterotyId(Connection con, int pid) {
+    }
+
     public int getCategoryId() {
         return categoryId;
     }

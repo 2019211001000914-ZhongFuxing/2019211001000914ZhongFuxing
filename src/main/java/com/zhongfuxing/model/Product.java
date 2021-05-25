@@ -82,4 +82,5 @@ public class Product {
 
     public void setPirce(double price) {
     }
+
 }
