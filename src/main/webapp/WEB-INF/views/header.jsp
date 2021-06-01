@@ -130,7 +130,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="<%=basePath%>shop">Products</a></li>
 										<!--<li><a href="product-details.html">Product Details</a></li>  -->
-										<li><a href="<%=basePath%>myCart">Cart</a></li> 
+										<li><a href="<%=basePath%>Cart">Cart</a></li>
 										<li><a href="<%=basePath%>order">Order</a></li>
 										
 										<%-- <li><a href="<%=basePath%>login">Login</a></li>  --%>
