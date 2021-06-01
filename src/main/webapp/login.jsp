@@ -1,25 +1,17 @@
-<%@ page import="java.io.PrintWriter" %><%--
-  Created by IntelliJ IDEA.
-  User: 13210
-  Date: 2021/4/3
-  Time: 23:11
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="header.jsp"%>
+<html>
 <body>
-<h1>Login</h1>
+<%@include  file="header.jsp" %>
+<h1>Login</h1><br>
 <%
-    if ((request.getAttribute("message")!=null)){
-        out.print("<h3>"+request.getAttribute("message")+"</h3>");
-    }
+if(!(request.getAttribute("message")==null)){
+    out.print("<h3>"+request.getAttribute("message")+"</h3>");
+}
 %>
-<form action="<%=request.getContextPath()%>/login" method="post">
-Username:<input type="text" name="username" required/><br>
-Password:&nbsp;<input type="password" name="password" minlength="8" required/><br>
-<input type="submit" value="Login"/>
-<input type="reset" value="reset"/>
+<form method="post"   action="login">
+   Username: <input type="text" name="username"  />
+    Password:<input type="password" name="txt"  />
+    <input type="submit" value="Submit"/>
 </form>
+<%@include  file="footer.jsp" %>
 </body>
-<%@include file="footer.jsp"%>
 </html>

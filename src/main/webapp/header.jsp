@@ -1,10 +1,8 @@
-<%--<%String path = request.getContextPath(); %>--%>
 <html>
  <head>
    <title>My Online Shop</title>
    
  </head>
-
  <body style="margin:0px;padding:0px;font-family:helvetica;">
  <table width="100%" cellpadding="0" cellspacing="0">
    <tr>
@@ -14,9 +12,8 @@
                             border-color:black;
                             padding:0px;
                             margin:0px;" valign="bottom">
-<%--         <%=request.getContextPath()%>--%>
-<%--    ${pageContext.request.contextPath}--%>
-     <img src="<%=request.getContextPath()%>/logo.jpg" align="left">
+      
+     <img src="logo.jpg" align="left">
      </td>
    </tr>
    <tr>
@@ -27,7 +24,7 @@
                             border-top-width:0px;
                             border-color:black;" align="center">
      <a style="color:white;" href="index.jsp">Home</a>
-   - <a style="color:white;" href="<%=request.getContextPath()%>/login.jsp">Login</a>
+   - <a style="color:white;" href="login.jsp">Login</a>
    - <a style="color:white;" href="productList">Product</a>
    - <a style="color:white;" href="#">FAQ</a>
    - <a style="color:white;" href="#">About</a>
@@ -40,6 +37,6 @@
   <tr height="20"><td align="right">
    <br> <a href="#">Logout</a>
   <br><a href="#">My Cart</a><br/>
-<a href="Week2/register.jsp">Register Here</a>
+<a href="register.jsp">Register Here</a>
   </td></tr>
  </table>

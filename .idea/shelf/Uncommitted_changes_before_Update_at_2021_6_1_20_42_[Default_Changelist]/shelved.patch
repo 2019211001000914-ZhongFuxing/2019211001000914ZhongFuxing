@@ -1,0 +1,148 @@
+Index: ../target/LuoJing2019211001000922/Week2/register.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: 13210\r\n  Date: 2021/3/15\r\n  Time: 0:22\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<% String path=request.getContextPath(); %>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<%@ taglib prefix=\"c\" uri=\"http://java.sun.com/jstl/core\"%>\r\n<script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"></script>\r\n\r\n\r\n\r\n<%@include file=\"../header.jsp\"%>\r\n    <title>Register</title>\r\n    <link rel=\"stylesheet\" href=\"semantic-ui/semantic.min.css\">\r\n    <script type=\"text/javascript\" src=\"js/jquery3.3.1.js\"></script>\r\n    <script type=\"text/javascript\" src=\"semantic-ui/semantic.min.js\"></script>\r\n\r\n    <style>\r\n\r\n        body{\r\n            font-size:12px;\r\n            font-family:\"宋体\";\r\n        }\r\n        .bule{\r\n            border-color:#ABFEFE;}\r\n        .font1{\r\n            color:#666;}\r\n        body{\r\n            background-color: rgba(189, 226, 231, 0.605);\r\n        }\r\n\r\n    </style>\r\n\r\n</head>\r\n<body>\r\n\r\n<%--value=\"${username}\"--%>\r\n<%--<form method=\"post\" id=\"form\" action=\"<%=path%>/index.jsp\">--%>\r\n<%--    Name: <input type=\"text\" id=\"username\" name=\"username\" required minlength=\"8\" placeholder=\"请输入用户名\"/><br>--%>\r\n<%--    Password: <input type=\"password\" id=\"password\" name=\"password\" placeholder=\"请输入密码\"/><br>--%>\r\n<%--    email    :<input type=\"email\" name=\"email\" required><br/>--%>\r\n<%--    Gender<input name=\"sex\" type=\"radio\" value=\"Male\"/>Male--%>\r\n<%--    <input name=\"sex\" type=\"radio\" value=\"Female\"/>Female<br/>--%>\r\n<%--    birthdate:<input type=\"datetime-local\" name=\"yyyy-mm-dd\" required><br/>--%>\r\n\r\n<%--    <button type=\"button\" name=\"loginButton\" onclick=\"loginVerify();\">登录</button><br>--%>\r\n\r\n<%--</form>--%>\r\n<form class=\"ui form\" action=\"<%=path%>/register\" method=\"post\">\r\n\r\n<%--    <div style=\"text-align: center;vertical-align: middle;\">--%>\r\n    <table width=\"400\" height=\"29\" border=\"0\" align=\"center\" >\r\n        <tr align=\"center\">\r\n            <a href=\"http://www.ecjtu.jx.cn/\"><h3>Go to ecjtu</h3></a>\r\n        </tr>\r\n\r\n<%--        Username:<input type=\"text\" name=\"username\" required><br/>--%>\r\n        <tr>\r\n            <td width=\"80\" bgcolor=\"#00cccc\"><b>Username:</b></td>\r\n            <td><input type=\"text\" name=\"username\" class=\"bule\" required></td>\r\n\r\n        </tr>\r\n        <br/>\r\n<%--        Password:&nbsp;<input type=\"password\" name=\"password\" required minlength=\"8\"><br/>--%>\r\n        <tr>\r\n            <td bgcolor=\"#00cccc\"><b>Password:  </b></td>\r\n            <td>\r\n                <input type=\"password\" name=\"password\" size=\"20\" class=\"bule\" required minlength=\"8\">\r\n            </td>\r\n<%--            <td class=\"font1\">最少6个字符，不超过14个字符（数字，字母和下划线）--%>\r\n<%--            </td>--%>\r\n        </tr>\r\n        <br/>\r\n<%--        Email:<input type=\"email\" name=\"email\" required><br/>--%>\r\n        <tr>\r\n            <td bgcolor=\"#00cccc\"><b>Email:</b></td>\r\n            <td><input type=\"email\" name=\"email\" class=\"bule\" required/></td>\r\n        </tr>\r\n        <br/>\r\n\r\n\r\n<%--        Gender:<input name=\"sex\" type=\"radio\" value=\"Male\"/>Male--%>\r\n<%--        <input name=\"sex\" type=\"radio\" value=\"Female\"/>Female<br/>--%>\r\n\r\n        <tr>\r\n            <td bgcolor=\"#00cccc\"><b>Gender:  </b></td>\r\n            <td colspan=\"2\">\r\n                <input type=\"radio\"  name=\"gender\" value=\"Male\" checked=\"checked\"/>Male\r\n                <input type=\"radio\"  name=\"gender\" value=\"Female\"/>Female\r\n            </td>\r\n        </tr>\r\n        <br/>\r\n<%--        Birthdate:<input type=\"datetime-local\" name=\"yyyy-mm-dd\" required><br/><br/>--%>\r\n\r\n        <tr>\r\n            <td bgcolor=\"#00cccc\"><strong>Birthdate:</strong></td>\r\n            <td colspan=\"2\">\r\n                <input type=\"datetime-local\" name=\"birthdate\" required/>\r\n            </td>\r\n        </tr>\r\n        <br/>\r\n    </table>\r\n<%--        <input name=\"b1\" type=\"submit\" id=\"b1\"  value=\"Registeime-locar\"  required><br/>--%>\r\n\r\n    <table width=\"400\"  align=\"center\">\r\n        <tr>\r\n            <td align=\"center\">\r\n                <input type=\"submit\" name=\"sex\" value=\"register\">\r\n                <input type=\"reset\" name=\"sex\" value=\"reset\">\r\n            </td>\r\n        </tr>\r\n    </table>\r\n<%--    </div>--%>\r\n\r\n</form>\r\n\r\n\r\n<%@include file=\"../footer.jsp\"%>\r\n\r\n<script>\r\n    function loginVerify() {\r\n        var username =document.getElementById(\"username\").value;\r\n        var password =document.getElementById(\"password\").value;\r\n\r\n        if(username ==''){\r\n            alert('用户名不能为空！');\r\n            return;\r\n        }\r\n        if(password ==''){\r\n            alert('密码不能为空！');\r\n            return;\r\n        }\r\n\r\n        // document.getElementById(\"form\").submit();\r\n    }\r\n</script>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../target/LuoJing2019211001000922/Week2/register.jsp	(revision 6653192cdd8e59f371ed132f1473827ef9680c42)
++++ ../target/LuoJing2019211001000922/Week2/register.jsp	(date 1622551299603)
+@@ -98,7 +98,7 @@
+         <tr>
+             <td bgcolor="#00cccc"><strong>Birthdate:</strong></td>
+             <td colspan="2">
+-                <input type="datetime-local" name="birthdate" required/>
++                <input type="datetime" name="birthdate" required/>
+             </td>
+         </tr>
+         <br/>
+Index: ../target/LuoJing2019211001000922/WEB-INF/Views/header.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--<%String path = request.getContextPath(); %>--%>\r\n<html>\r\n <head>\r\n   <title>My Online Shop</title>\r\n   \r\n </head>\r\n\r\n <body style=\"margin:0px;padding:0px;font-family:helvetica;\">\r\n <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\">\r\n   <tr>\r\n     <td height=\"78\" style=\"background-color:#788dad;\r\n                            border-width:2px;\r\n                            border-style:solid;\r\n                            border-color:black;\r\n                            padding:0px;\r\n                            margin:0px;\" valign=\"bottom\">\r\n<%--         <%=request.getContextPath()%>--%>\r\n<%--    ${pageContext.request.contextPath}--%>\r\n     <img src=\"<%=request.getContextPath()%>/logo.jpg\" align=\"left\">\r\n     </td>\r\n   </tr>\r\n   <tr>\r\n     <td height=\"15\" style=\"color:white;\r\n                            background-color:#444444;\r\n                            border-width:2px;\r\n                            border-style:solid;\r\n                            border-top-width:0px;\r\n                            border-color:black;\" align=\"center\">\r\n     <a style=\"color:white;\" href=\"home\">Home</a>\r\n   - <a style=\"color:white;\" href=\"login\">Login</a>\r\n   - <a style=\"color:white;\" href=\"productList\">Product</a>\r\n   - <a style=\"color:white;\" href=\"#\">FAQ</a>\r\n   - <a style=\"color:white;\" href=\"#\">About</a>\r\n   \r\n   </td>\r\n   </tr>\r\n   <tr height=\"25\"><td align=\"right\"><font size=\"18\" color=\"blue\">\r\n   Welcome,<font size=\"18\" color=\"red\"> Guest</font>\r\n   </font></td> </tr>\r\n  <tr height=\"20\"><td align=\"right\">\r\n   <br> <a href=\"#\">Logout</a>\r\n  <br><a href=\"#\">My Cart</a><br/>\r\n<a href=\"Week2/register.jsp\">Register Here</a>\r\n  </td></tr>\r\n </table>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../target/LuoJing2019211001000922/WEB-INF/Views/header.jsp	(revision 6653192cdd8e59f371ed132f1473827ef9680c42)
++++ ../target/LuoJing2019211001000922/WEB-INF/Views/header.jsp	(date 1622551299478)
+@@ -1,4 +1,5 @@
+ <%--<%String path = request.getContextPath(); %>--%>
++<%@ page import="com.LuoJing.Model.User" %>
+ <html>
+  <head>
+    <title>My Online Shop</title>
+@@ -35,10 +36,26 @@
+    </td>
+    </tr>
+    <tr height="25"><td align="right"><font size="18" color="blue">
+-   Welcome,<font size="18" color="red"> Guest</font>
++
++
++   Welcome,
++       <%
++        User userValue = (User)session.getAttribute("user");
++           if(userValue !=null){
++               out.println(userValue.getUsername());
++//               User user = (User) session.getAttribute("user");
++           }else{
++//               out.print("guest");
++               out.print("<font size=\"18\" color=\"red\"> Guest</font>");
++           }
++       %>
++
++
+    </font></td> </tr>
+   <tr height="20"><td align="right">
+-   <br> <a href="#">Logout</a>
++      <% if (session.getAttribute("user")!=null){%>
++   <br> <a href="loginout">Logout</a>
++      <%}%>
+   <br><a href="#">My Cart</a><br/>
+ <a href="Week2/register.jsp">Register Here</a>
+   </td></tr>
+Index: ../target/LuoJing2019211001000922/WEB-INF/Views/login.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page import=\"java.io.PrintWriter\" %><%--\r\n  Created by IntelliJ IDEA.\r\n  User: 13210\r\n  Date: 2021/4/3\r\n  Time: 23:11\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<%@include file=\"header.jsp\"%>\r\n<body>\r\n<h1>Login</h1>\r\n<%\r\n    if ((request.getAttribute(\"massage\")!=null)){\r\n        out.print(\"<h3>\"+request.getAttribute(\"massage\")+\"</h3>\");\r\n    }\r\n%>\r\n<form action=\"<%=request.getContextPath()%>/login\" method=\"post\">\r\nUsername:<input type=\"text\" name=\"username\" required/><br>\r\nPassword:&nbsp;<input type=\"password\" name=\"password\" minlength=\"8\" required/><br>\r\n<input type=\"submit\" value=\"Login\"/>\r\n<input type=\"reset\" value=\"reset\"/>\r\n</form>\r\n</body>\r\n<%@include file=\"footer.jsp\"%>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../target/LuoJing2019211001000922/WEB-INF/Views/login.jsp	(revision 6653192cdd8e59f371ed132f1473827ef9680c42)
++++ ../target/LuoJing2019211001000922/WEB-INF/Views/login.jsp	(date 1622551299478)
+@@ -14,11 +14,30 @@
+         out.print("<h3>"+request.getAttribute("massage")+"</h3>");
+     }
+ %>
++<%
++    Cookie[] allCookies = request.getCookies();
++    String username="",password="",remeberMeValue="";
++    if (allCookies!=null){
++        for (Cookie c :allCookies){
++            if (c.getName().equals("cUsername")){
++                username = c.getValue();
++            }
++            if (c.getName().equals("cPassword")){
++                password = c.getValue();
++            }
++            if (c.getName().equals("cRemeberMe")){
++                remeberMeValue = c.getValue();
++            }
++        }
++    }
++%>
+ <form action="<%=request.getContextPath()%>/login" method="post">
+-Username:<input type="text" name="username" required/><br>
+-Password:&nbsp;<input type="password" name="password" minlength="8" required/><br>
++Username:<input type="text" name="username" value="<%=username%>" required/><br>
++Password:&nbsp;<input type="password" name="password" value="<%=password%>" minlength="8" required/><br>
++    <input type="checkbox" value="1" name="remeberMe" <%=remeberMeValue.equals("1") ?"checked":""%> checked/>RemeberMe <br>
+ <input type="submit" value="Login"/>
+ <input type="reset" value="reset"/>
++
+ </form>
+ </body>
+ <%@include file="footer.jsp"%>
+Index: ../src/main/webapp/WEB-INF/Views/header.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--<%String path = request.getContextPath(); %>--%>\r\n<html>\r\n <head>\r\n   <title>My Online Shop</title>\r\n   \r\n </head>\r\n\r\n <body style=\"margin:0px;padding:0px;font-family:helvetica;\">\r\n <table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\">\r\n   <tr>\r\n     <td height=\"78\" style=\"background-color:#788dad;\r\n                            border-width:2px;\r\n                            border-style:solid;\r\n                            border-color:black;\r\n                            padding:0px;\r\n                            margin:0px;\" valign=\"bottom\">\r\n<%--         <%=request.getContextPath()%>--%>\r\n<%--    ${pageContext.request.contextPath}--%>\r\n     <img src=\"<%=request.getContextPath()%>/logo.jpg\" align=\"left\">\r\n     </td>\r\n   </tr>\r\n   <tr>\r\n     <td height=\"15\" style=\"color:white;\r\n                            background-color:#444444;\r\n                            border-width:2px;\r\n                            border-style:solid;\r\n                            border-top-width:0px;\r\n                            border-color:black;\" align=\"center\">\r\n     <a style=\"color:white;\" href=\"home\">Home</a>\r\n   - <a style=\"color:white;\" href=\"login\">Login</a>\r\n   - <a style=\"color:white;\" href=\"productList\">Product</a>\r\n   - <a style=\"color:white;\" href=\"#\">FAQ</a>\r\n   - <a style=\"color:white;\" href=\"#\">About</a>\r\n   \r\n   </td>\r\n   </tr>\r\n   <tr height=\"25\"><td align=\"right\"><font size=\"18\" color=\"blue\">\r\n   Welcome,<font size=\"18\" color=\"red\"> Guest</font>\r\n   </font></td> </tr>\r\n  <tr height=\"20\"><td align=\"right\">\r\n   <br> <a href=\"#\">Logout</a>\r\n  <br><a href=\"#\">My Cart</a><br/>\r\n<a href=\"Week2/register.jsp\">Register Here</a>\r\n  </td></tr>\r\n </table>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../src/main/webapp/WEB-INF/Views/header.jsp	(revision 6653192cdd8e59f371ed132f1473827ef9680c42)
++++ ../src/main/webapp/WEB-INF/Views/header.jsp	(date 1622551299431)
+@@ -1,4 +1,5 @@
+ <%--<%String path = request.getContextPath(); %>--%>
++<%@ page import="com.LuoJing.Model.User" %>
+ <html>
+  <head>
+    <title>My Online Shop</title>
+@@ -35,10 +36,26 @@
+    </td>
+    </tr>
+    <tr height="25"><td align="right"><font size="18" color="blue">
+-   Welcome,<font size="18" color="red"> Guest</font>
++
++
++   Welcome,
++       <%
++        User userValue = (User)session.getAttribute("user");
++           if(userValue !=null){
++               out.println(userValue.getUsername());
++//               User user = (User) session.getAttribute("user");
++           }else{
++//               out.print("guest");
++               out.print("<font size=\"18\" color=\"red\"> Guest</font>");
++           }
++       %>
++
++
+    </font></td> </tr>
+   <tr height="20"><td align="right">
+-   <br> <a href="#">Logout</a>
++      <% if (session.getAttribute("user")!=null){%>
++   <br> <a href="loginout">Logout</a>
++      <%}%>
+   <br><a href="#">My Cart</a><br/>
+ <a href="Week2/register.jsp">Register Here</a>
+   </td></tr>

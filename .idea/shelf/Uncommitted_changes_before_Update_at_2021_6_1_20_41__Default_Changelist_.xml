@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_2021_6_1_20_41_[Default_Changelist]" date="1622551282747" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_6_1_20_41_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2021/6/1 20:41 [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="../target/LuoJing2019211001000922/WEB-INF/classes/com/LuoJing/Dao/UserDao.class" />
+    <option name="AFTER_PATH" value="../target/LuoJing2019211001000922/WEB-INF/classes/com/LuoJing/Dao/UserDao.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_6_1_20_41_[Default_Changelist]/UserDao.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="../target/classes/com/LuoJing/Dao/UserDao.class" />
+    <option name="AFTER_PATH" value="../target/classes/com/LuoJing/Dao/UserDao.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_6_1_20_41_[Default_Changelist]/UserDao1.class" />
+  </binary>
+</changelist>

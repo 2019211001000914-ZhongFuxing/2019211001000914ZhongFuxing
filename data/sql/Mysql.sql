@@ -1,10 +1,8 @@
-create DATABASE db_user;
-use db_user;
-create TABLE usertable(
-	id int(10) auto_increment PRIMARY KEY,
-	username VARCHAR(50) not NULL,
-	password VARCHAR(20) not NULL,
-	email VARCHAR(20) not NULL,
-	gender VARCHAR(10) not NULL,
-	birthday date
-);
+create database userdb;
+create table Usertable
+(
+username VARCHAR(20) NOT NULL UNIQUE ,
+password CHAR(32) NOT NULL,
+email  VARCHAR(50) NOT NULL,
+age  char(8) NOT NULL,
+sex CHAR(32) NOT NULL,)
