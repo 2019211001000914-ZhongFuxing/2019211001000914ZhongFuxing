@@ -9,20 +9,22 @@
         version="4.0">
   <context-param>
     <param-name>driver</param-name>
-    <param-value>com.mysql.cj.jdbc.Driver</param-value>
-
+    <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
   </context-param>
+  <!-- 配置Servlet的初始化参数：url -->
   <context-param>
     <param-name>url</param-name>
-    <param-value>jdbc:mysql://localhost:3306/usertable?characterEncoding = utf-8&amp;serverTimezone = UTC</param-value>
+    <param-value>jdbc:sqlserver://192.168.1.125:1433;DatabaseName=userdb</param-value>
   </context-param>
+  <!-- 配置Servlet的初始化参数：user -->
   <context-param>
     <param-name>username</param-name>
-    <param-value>zfx</param-value>
+    <param-value>sa</param-value>
   </context-param>
+  <!-- 配置Servlet的初始化参数：pass -->
   <context-param>
     <param-name>password</param-name>
-    <param-value>wdcdxj56</param-value>
+    <param-value>admin12345678</param-value>
   </context-param>
   <display-name>Archetype Created Web Application</display-name>
 
@@ -33,9 +35,5 @@
   <servlet-mapping>
     <servlet-name>hello</servlet-name>
     <url-pattern>/hello</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>RegisterServlet</servlet-name>
-    <url-pattern>/RegisterServlet</url-pattern>
   </servlet-mapping>
 </web-app>
