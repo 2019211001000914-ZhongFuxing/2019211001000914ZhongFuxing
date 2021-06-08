@@ -36,4 +36,10 @@ public class Item {
                 ", qunatity=" + qunatity +
                 '}';
     }
+
+    public void setQuantity(int quantity) {
+    }
+
+    public int getQuantity() {
+    }
 }

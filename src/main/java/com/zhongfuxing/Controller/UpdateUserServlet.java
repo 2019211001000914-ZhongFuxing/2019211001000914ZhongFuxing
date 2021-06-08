@@ -1,0 +1,57 @@
+package com.zhongfuxing.Controller;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.zhongfuxing.dao.UserDao;
+import com.zhongfuxing.model.*;
+
+@WebServlet(name = "UpdateUserServlet",value = "/updateUser")
+class UpdateUserServlet extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("WEB-INF/Views/updateUser.jsp").forward(request,response);
+    }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Connection conn = (Connection) getServletContext().getAttribute("conn");
+        int id = Integer.valueOf(request.getParameter("id"));
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String email = request.getParameter("email");
+        String gender = request.getParameter("sex");
+        String birthday = request.getParameter("birthdate");
+
+        User user = new User();
+        user.setId(id);
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setEmail(email);
+        user.setGender(gender);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Date date = dateFormat.parse(birthday);
+            user.setBirthday(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+
+        UserDao userDao = new UserDao();
+        try {
+//            int count = userDao.updateUser(conn,user);
+            userDao.updateUser(conn,user);
+            request.getRequestDispatcher("accountDetail").forward(request,response);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+}
