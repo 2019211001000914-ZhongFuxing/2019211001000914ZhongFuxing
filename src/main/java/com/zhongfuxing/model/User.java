@@ -93,6 +93,6 @@ public class User {
     public void setBirthday(Date date) {
     }
 
-    public boolean getBirthDate() {
+    public void getBirthDate() {
     }
 }
